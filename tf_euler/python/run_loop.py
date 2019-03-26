@@ -304,7 +304,7 @@ def run_network_embedding(flags_obj, master, is_chief):
         nb_num=5)
 
   elif flags_obj.model == 'lshne':
-    model = models.LsHNE(-1,[[0,0,0],[0,0,0]],-1,128,[1,1],[1,1])
+    model = models.LsHNE(-1,[[[0],[0],[0]],[[0],[0],[0]]],-1,128,[1,1],[1,1])
 
   elif flags_obj.model == 'saved_embedding':
     embedding_val = np.load(os.path.join(flags_obj.model_dir, 'embedding.npy'))
